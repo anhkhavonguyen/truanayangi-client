@@ -3,12 +3,13 @@ import { HttpErrorResponse, HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
 import { Food } from '../shared/interfaces/food';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
-  private API = 'http://localhost:4000/food';
+  private API = `${environment.api}/food`;
 
   constructor(private http: HttpClient) { }
 
@@ -32,6 +33,7 @@ export class FoodService {
       );
   }
 
+  // tslint:disable-next-line:no-shadowed-variable
   addFood(Food: Food): Observable<Food> {
     return this
       .http
@@ -42,6 +44,7 @@ export class FoodService {
       );
   }
 
+  // tslint:disable-next-line:no-shadowed-variable
   updateFood(Food: Food): Observable<Food> {
     return this
       .http

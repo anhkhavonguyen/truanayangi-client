@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "orders": {
+    "food": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -35,7 +35,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/orders",
+            "outputPath": "dist/food",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -75,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "orders:build"
+            "browserTarget": "food:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "orders:build:production"
+              "browserTarget": "food:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "orders:build"
+            "browserTarget": "food:build"
           }
         },
         "test": {
@@ -123,7 +123,7 @@
         }
       }
     },
-    "orders-e2e": {
+    "food-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -131,11 +131,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "orders:serve"
+            "devServerTarget": "food:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "orders:serve:production"
+              "devServerTarget": "food:serve:production"
             }
           }
         },
@@ -151,5 +151,5 @@
       }
     }
   },
-  "defaultProject": "orders"
+  "defaultProject": "food"
 }
