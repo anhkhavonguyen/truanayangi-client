@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  api: 'http://truanayangi:4000'
+  api: 'https://truanayangi-service.herokuapp.com:4000'
+  
 };
