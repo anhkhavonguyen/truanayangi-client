@@ -46,7 +46,7 @@ export class AddFoodComponent implements OnInit {
 
     this.foodService.addFood(food)
       .subscribe(data => {
-        console.log(data);
+        this.router.navigate(['/food']);
       });
   }
 }
